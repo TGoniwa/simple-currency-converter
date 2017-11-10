@@ -89,7 +89,7 @@ class Converter:
 
     def _get_data(self):
         """ Downloads data of currency conversion rates from API. """
-        url = "http://api.fixer.io/latest?base={0}".format(self.inC)
+        url = "http://api.fixer.io/latest?base={USD}".format(self.inC)
         response = urlopen(url)
         string = response.read().decode('utf-8')
         return json.loads(string)
